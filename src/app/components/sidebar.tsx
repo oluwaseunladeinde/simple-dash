@@ -10,7 +10,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         <div className='flex'>
 
             <div className='fixed w-20 h-screen p-4 bg-white border-r-[1px] flex flex-col jsutify-between'>
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center text-gray-700'>
                     <Link href="/">
                         <div className='bg-purple-800 text-white p-3 rounded-lg inline-block'>
                             <RxSketchLogo size={20} />
@@ -27,7 +27,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                             <RxPerson size={20} />
                         </div>
                     </Link>
-                    <Link href="/person">
+                    <Link href="/orders">
                         <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
                             <HiOutlineShoppingBag size={20} />
                         </div>
