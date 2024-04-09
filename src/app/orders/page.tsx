@@ -1,5 +1,5 @@
 
-import { BsPersonFill } from "react-icons/bs";
+import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 import { data } from "../data/data";
 
 import React from 'react'
@@ -15,7 +15,7 @@ const OrdersPage = () => {
             </div>
             <div className="p-4">
                 <div className="w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto text-gray-500">
-                    <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
+                    <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer font-semibold">
                         <span>Order</span>
                         <span className="sm:text-left text-right">Status</span>
                         <span className="hidden md:grid">Last Order</span>
@@ -35,9 +35,14 @@ const OrdersPage = () => {
                                 </div>
                                 <p className="text-gray-600 sm:text-left text-right ">
                                     <span className={
-                                        order.status === "Processing" ? "bg-green-200 p-2 rounded-lg" : order.status === "Completed" ? "bg-blue-200 p-2 rounded-lg" : "bg-yellow-200"
+                                        order.status === "Processing" ? "bg-blue-200 p-2 rounded-lg" : order.status === "Completed" ? "bg-green-200 p-2 rounded-lg" : "bg-yellow-200 p-2"
                                     }>{order.status}</span>
                                 </p>
+                                <p className="hidden md:flex">{order.date}</p>
+                                <div className="sm:flex hidden justify-between items-center">
+                                    <p>{order.method}</p>
+                                    <BsThreeDotsVertical />
+                                </div>
                             </li>
                         ))}
                     </ul>
